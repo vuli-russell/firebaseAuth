@@ -91,7 +91,7 @@ const App = () => {
             <p>{user.email}</p>
             <p>Change Password:</p>
             <input id={user.uid} type="password" autoComplete="new-password"/>
-            <button onClick={() => {handleChangePassword(user.uid)}}>change password</button>
+            <button onClick={(e) => {e.preventDefault();handleChangePassword(user.uid)}}>change password</button>
           </form>
         )
       })}
